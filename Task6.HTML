@@ -1,0 +1,31 @@
+<html>
+<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Babenko Danil</title>
+    </head>
+    <title>Зарплата в первые месяцы года</title><br><br>    
+    <a>Январь:<input type="text" id="input1" value=300 /></a><br>
+    <ba>Февраль:<input type="text" id="input2" value=200 /></ba><br>
+    <c>Март:<input type="text" id="input3" value=500 /></c><br>
+    <d>Апрель:<input type="text" id="input4" value=250 /></d><br>
+    <e>Май:<input type="text" id="input5" value=350 /></e><br>
+    <e>Июнь:<input type="text" id="input6" value=500 /></e><br>
+    <total>Total amount: <input type="text" id = 'total' value=350 /></total><br>
+    <button id = "Calculate">Вычислить</button><button id = "Update">Обновить</button>
+ <script>
+    calculateButton = document.getElementById('Calculate')
+    calculateButton.onclick = function(){
+        let Value1 = document.getElementById("input1").value;
+        let Value2 = document.getElementById("input2").value;
+        let Value3 = document.getElementById("input3").value;
+        let Value4 = document.getElementById("input4").value;
+        let Value5 = document.getElementById("input5").value;
+        let Value6 = document.getElementById("input6").value;
+        let totalAmount = (parseInt(Value1) + parseInt(Value2) + parseInt(Value3) + parseInt(Value4) +parseInt( Value5 )+ parseInt(Value6))/6;
+        document.getElementById('total').value = totalAmount;
+        };
+</script>
+</body>
+</html>

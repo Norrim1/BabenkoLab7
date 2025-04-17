@@ -1,0 +1,12 @@
+<html>
+<body>
+ <div id = "Erase">This should be erased</div>
+ <button id = "Bttn">Erase</button>
+ <script>
+    eraseButton = document.getElementById('Bttn')
+    eraseButton.onclick = function(){
+        let eraseDiv = document.getElementById("Erase");
+        eraseDiv.textContent = ' ';};
+</script>
+</body>
+</html>

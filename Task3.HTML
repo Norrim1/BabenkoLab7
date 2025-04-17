@@ -1,0 +1,15 @@
+<html>
+<body>
+ <div id = 'Cord'>Mouse pos </div>
+ <script>
+    function printMousePos(event) 
+    {
+    let show = document.getElementById('Cord');
+    show.textContent =
+    "Mouse pos X:" + event.clientX +
+    "  Y:" + event.clientY;
+    }
+    document.addEventListener("click", printMousePos);
+</script>
+</body>
+</html>
