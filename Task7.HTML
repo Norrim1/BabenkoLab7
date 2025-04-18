@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Line Change</title>
+    <style>
+    </style>
+</head>
+<body>
+    <a>Горизонтальные линии</a><br>
+    <c>Выберите значения параметров, которые требуется изменить, и нажмите кнопку <b>Выполнить</b>. </c><br>
+    <hr class="line" id="line" height = "1px" width="270px" backgroundcolor = "black">
+    
+    <radio_>
+        <input type="radio" id="left" name="alcheck" value="left" checked>LEFT
+        <input type="radio" id="center" name="alcheck" value="center">CENTER
+        <input type="radio" id="right" name="alcheck" value="right">RIGHT<br>
+    </radio_>
+    
+    <size_>
+        Толщина линии (size):<input type="number" id="size" value="25"><br>
+    </size_>
+    
+    <length_>
+        Длина линии (width):<input type="number" id="length" value="270"><br>
+    </length_>
+    
+    <color_>
+        Цвет линии (color):<select id="color">
+            <option value="black">black</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+        </select>
+    </color_>
+    
+    <div class="buttons">
+        <button id="Bttn">Выполнить</button>
+    </div>
+    
+    <script>
+        changeLineButton = document.getElementById('Bttn');
+        changeLineButton.onclick = function() {
+            let line = document.getElementById('line');
+            if (document.querySelector('input[name="alcheck"]:checked').value == 'left') {
+                line.style.marginLeft = '0';
+            } else {
+                line.style.marginLeft = 'auto';
+            }
+            if (document.querySelector('input[name="alcheck"]:checked').value == 'right') {
+                line.style.marginRight = '0';
+            } else {
+                line.style.marginRight = 'auto';
+            }
+            line.style.height = document.getElementById('size').value + 'px';
+            line.style.width = document.getElementById('length').value + 'px';
+            line.style.backgroundColor = document.getElementById('color').value;
+        };
+    </script>
+</body>
+</html>
