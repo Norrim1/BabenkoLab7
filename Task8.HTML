@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servis registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
+</head>
+<body>
+    <section id = "loading-screen">
+        <div class="loader-container">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="loading-screen-text">Загрузка</div>
+        </div>
+    </section>
+    <script src="loader.js"></script>
+    <section class="first-registration-screen" id="first-registration-screen">
+        <h1>Персональные данные</h1>
+        <div class="registration-group">
+            <label class="registration-label">Имя:</label>
+            <input type="text" class="registration-input" id="name">
+        </div>
+        <div class="registration-group">
+            <label class="registration-label">Фамилия:</label>
+            <input type="email" class="registration-input" id="surname">
+        </div>
+        <div class="registration-group">
+            <label class="registration-label">Электронная почта:</label>
+            <input type="text" class="registration-input" id="email">
+        </div>
+        <div class="registration-group">
+            <label class="registration-label">Страна:</label>
+            <select class="registration-input" id="country-select">
+            </select>
+        </div>
+        <div class="registration-group">
+            <label class="registration-label">Адрес:</label>
+            <input type="text" class="registration-input" id="address">
+        </div>
+        <div class="registration-group">
+            <label class="registration-label">Пароль:</label>
+            <input type="text" class="registration-input" id="password">
+        </div>
+        <div class="registration-group">
+            <label class="registration-label">Повторите пароль:</label>
+            <input type="tel" class="registration-input" id="check-password">
+        </div>
+        <div class="button-container">
+            <button type="button" class="cancel-bttn" id="cancel-bttn">Отмена</button>
+            <button type="button" class="next-bttn" id="next-bttn" disabled>Далее</button>
+        </div>
+        <script src="first-screen.js"></script>
+    </section>
+    <section class="second-registration-screen" id="second-registration-screen">
+    <h1>Телефонный номер</h1>
+    <label class="phone-label">В целях безопасности нужно подтверждение вашего телефонного номера. На ваш номер будет отправлен 4-значный код для подтверждения.</label>
+    <div class="registration-phone-group">
+        <input type="text" class="phone-input" id="phone-number" placeholder="+___(___)___-__-__">
+        <button type="button" class="number-bttn" id="number-bttn">Отправить</button>
+    </div>
+    <div class="sms" id="sms">
+        <input type="text" class="code-input" id="code-number" pattern="\d{4}" maxlength="4" placeholder="0000" required/>
+        <button type="button" class="button" id="code-bttn">Проверить</button>
+    </div>
+    <div class="registration-phone-group">
+        <button type="button" class="button" id="back-bttn">Назад</button>
+        <button type="button" class="button" id="next-bttn-2" disabled>Далее</button>
+    </div>
+    <script src="second-screen.js"></script>
+    </section>
+    <section class="third-registration-screen" id="third-registration-screen">
+    <h1>Метод оплаты</h1>
+    <label class="phone-label">Для совершения покупок в сервисе необходимо подключить банковскую карту.</label>
+    <div>Номер карты </div>
+    <input type="text" class="card-input" id="card-number" maxlength="19" pattern="\d{16}" placeholder="0000 0000 0000 0000" required/>
+    <div class="registration-phone-group">
+        Срок пользования <input type="text" class="code-input" id="end-time" maxlength="5" pattern="\d{4}" placeholder="00/00" required/>
+        CVV <input type="text" class="code-input" id="cvv" maxlength="3" pattern="\d{3}" placeholder="000" required/>
+    </div>
+    <div class="radio-group">
+        <input type="radio" id="agree-terms" required>Я согласен с условиями обслуживания и передачей своей бессмертной души в пользование владельца, после окончания её пребывания в этом бренном теле.
+    </div>
+    <div class="registration-phone-group">
+        <button type="button" class="button" id="back-bttn-2">Назад</button>
+        <button type="button" class="button" id="next-bttn-3" disabled>Далее</button>
+    </div>
+    <script src="third-screen.js"></script>
+    </section>
+    <section class="end-registration-screen" id="end-registration-screen">
+        <h1>Успешное прохождение регистрации</h1>
+    </section>
+</body>
+</html>

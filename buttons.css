@@ -1,0 +1,45 @@
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-bttn {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.cancel-bttn:hover {
+    background-color: #e0e0e0;
+}
+
+.next-bttn {
+    background-color: #782a7a;
+    color: white;
+}
+
+.next-bttn:disabled {
+    background-color: #cccccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.number-bttn {
+    background-color: #782a7a;
+    color: white;
+}
+
+.number-bttn:disabled {
+    background-color: #cccccc;
+    color: #666;
+    cursor: not-allowed;
+}
